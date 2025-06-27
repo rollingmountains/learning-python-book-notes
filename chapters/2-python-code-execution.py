@@ -46,7 +46,7 @@ Why have an intermediary layer and not simply translate human code to machine co
 - This is all to say that developers or hobbiest can write the code and run it with no additional cost. Only only has to save the file in .py extension and execute with a command python code.py 
 
 Note: Standalone executables
---> There are always people to tend to be a bit adventures and for them there is an option to ship the python file as executables. These executables can be run as an application.
+--> There are always people who tend to be a bit adventurous and for them there is an option to ship the python file as executables. These executables can be run as an application.
 --> Example for macos executable
 - Install a library called pyinstaller. Excellent example of using third pary library
 - Create a python file with .py eg code.py
