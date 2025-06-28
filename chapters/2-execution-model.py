@@ -9,7 +9,7 @@ Where does the code actually run or get executed and by whom?
 --> All programming languages have their own mechanism to translate their human readable code to machine code. The mechanism is called interpreter.
 --> Ultimately interpreter facilitates execution of the code by serving the human code as machine code to CPU
 
-Python's mechanism
+Python's execution model
 
 # 1. Most common python interpreter is CPython which runs on computers, smartphone...
 
@@ -58,7 +58,7 @@ Note: Standalone executables
 - so the pyinstaller bundles the code file, and python interpreter in a pacakage and ships it. recall python needs an interpreter run the human code. and pyinstaller serves all as a bundle in one single pacakge
     
 # 2. Other interpreters
-Python community is always experimenting and as a part of that there are other interpreters for specific needs. Some of the noted below, this is a verbatim text from the book:
+Python community is always experimenting and as a part of that there are other interpreters for specific needs. Some of them noted below, this is a verbatim text from the book:
 --> Jython and IronPython process Python programs for use in Java and .NET environments, respectively; they are alternative compilers for Python.
 --> PyPy and Shed Skin are reimplementations of Python targeted at speed. PyPy speeds normal Python programs by using runtime type information and a JIT compiler to replace some Python bytecode with machine code as the program runs. Shed Skin speeds programs with an AOT compiler that translates a restricted subset of Python to C++, from which it can be fully compiled to machine code to be run as a program or used in others. Cython is a Python/C combination that can be compiled into machine-code extensions accessible to CPython code.”
 
