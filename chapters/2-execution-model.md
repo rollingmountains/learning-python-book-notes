@@ -47,11 +47,13 @@ Where does the code actually run or get executed and by whom?
 - This is all to say that developers or hobbiest can write the code and run it with no additional cost. Only only has to save the file in .py extension and execute with a command `python code.py` 
 
 **Note: Standalone executables**
---> There are always people who tend to be a bit adventurous and for them there is an option to ship the python file as executables. These executables can be run as an application.
---> Example for macos executable
-- Install a library called pyinstaller. Excellent example of using third pary library
-- Create a python file with .py eg code.py
-- run this from a command line tool from the directory same as the code.py is saved 
+* There are always people who tend to be a bit adventurous and for them there is an option to ship the python file as executables. These executables can be run as an application.
+* Example for macos executable
+    - Install a library called pyinstaller. Excellent example of using third pary library
+    ```bash
+    uv install pyinstaller```
+    - Create a python file with .py eg code.py
+    - run this from a command line tool from the directory same as the code.py is saved 
     ```bash
     pyinstaller --onefile --windowed hello.py
     ```

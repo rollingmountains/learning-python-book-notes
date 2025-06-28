@@ -7,10 +7,12 @@ so much so that it's used from scripting to large scale development
 When you type anything in python file, it becomes an object just like how anything that exists on the earth is an object. Python automatically knows their type. so there isn't any need for explicit writing about the type.
 Below data work simply out of the box
 
-``` bash   10
+```   
+    10
     'this is a string'
     10 + 10
-    'i am a superman' + 'and also a supervillian'```
+    'i am a superman' + 'and also a supervillian'
+    ```
 
 Note: Duck typing enables to lookup for the + operator method on the object's tree hierarchy , 
 and polymorphism(part of OOP) helps to execute the method when found. Hence the same operator 
