@@ -27,14 +27,14 @@ and polymorphism(part of OOP) helps to execute the method when found. Hence the 
 when unsued the memory space is reclaimed by a process called garbage collection.
 
 **Execution Flow:**
-Writing code --> python reads the file from top to bottom just like a human would read, making sure all the code doesn't have mistakes in the language.
-Translate code --> python compiles the code into another format called bytecode. 
-Bytecode --> this code is OS agonastic, which means it's universal such that it can be used on any OS that has python interpreter installed
-Runtime --> The python interpreter, python virtual machine installed in the OS then each bytecode instructions: automatically identifies the object type, allocation memory for each objects, searching and find method location of objects in the class hierarchy tree.
-Machine Code(PVM <-> CPU) --> Python virtual machine interprets each line of bytecode and calls on the precompiled machine code equivalent C function while passing the objects into the function.
-Pre compile C Function: The C functions then dispatch the machine code to the CPU for execution. The function returns the pointer to the 
-Output: Python virtual machine picks the data and formats it into human readable form using pythons internal tools. 
-Note for Note: The output need not be complied into bytecode and then back to human readable form because unlike code in .py file which are instructions that need to complied, the output is merely pointer to the objects in the memory which the PVM is fully capable of format in human readable form.
+- Writing code --> python reads the file from top to bottom just like a human would read, making sure all the code doesn't have mistakes in the language.
+- Translate code --> python compiles the code into another format called bytecode. 
+- Bytecode --> this code is OS agonastic, which means it's universal such that it can be used on any OS that has python interpreter installed
+- Runtime --> The python interpreter, python virtual machine installed in the OS then each bytecode instructions: automatically identifies the object type, allocation memory for each objects, searching and find method location of objects in the class hierarchy tree.
+- Machine Code(PVM <-> CPU) --> Python virtual machine interprets each line of bytecode and calls on the precompiled machine code equivalent C function while passing the objects into the function.
+- Pre compile C Function: The C functions then dispatch the machine code to the CPU for execution. The function returns the pointer to the 
+- Output: Python virtual machine picks the data and formats it into human readable form using pythons internal tools. 
+**Note for Note: **The output need not be complied into bytecode and then back to human readable form because unlike code in .py file which are instructions that need to complied, the output is merely pointer to the objects in the memory which the PVM is fully capable of format in human readable form.
 
 ### 3. Programming in the large support
 Here are the tool set that python provides in order to support writing large and complex systems.
