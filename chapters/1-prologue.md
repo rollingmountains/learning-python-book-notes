@@ -8,10 +8,10 @@ When you type anything in python file, it becomes an object just like how anythi
 Below data work simply out of the box
 
   
-```10
+10
 'this is a string'
 10 + 10
-'i am a superman' + 'and also a supervillian'```
+'i am a superman' + 'and also a supervillian'
 
 
 Note: Duck typing enables to lookup for the + operator method on the object's tree hierarchy , 
@@ -49,8 +49,8 @@ Python provides objects out of the box that helps in storing anything from simpl
 Recall:
 - how in python every object is a space in the memory and all that names given to these objects are merely pointers to this memory location. for eg.  
 
-```    name = 'joe'
-    repeat_name = name```
+name = 'joe'
+repeat_name = name
     
 Here both name and repeat_name point to the same memory address of the string object 'joe'.
 - python keeps track of these reference pointers and as soon as the pointer's count hits 0, the memory allocated to the string object becomes available to be reclaimed. and python employs garbage collector to do the job
