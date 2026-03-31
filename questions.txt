@@ -1,0 +1,90 @@
+Part 1: Conceptual Recall
+
+Q1: In Python, which values are considered falsy? List at least 5 different examples.
+Ans: False, 0, [], {}, None, 
+
+Q2: Explain the difference between is and == in the context of conditional checks.
+Ans: is is to check if both the names point to the same object in memory, == is to check if the values of two objects being compared is equal.
+
+Q3: What is the difference between a Python if statement with multiple elifs vs using multiple match cases with guards? When might one be more readable than the other?
+Ans: Both are meant to do conditional checks. However, match edges in cases where there needs to be data structure pattern matching and conditional checks on the object. But if with elif is preferred when no destructing and patterns are requried.
+
+Q4: Why does Python allow expressions like if x: instead of if x is True:? What concept allows this?
+Ans: Each object in python are inherently carry Truthy or Falsy depending on their state. Empyt and Zero objects are falsy, non empyt and non zero are truthy. Boolean True and False are 1 and 0 internally. When we do if x it would check if the x is non empty and non zero, when we do x is True, it will simply check if x and True are pointing to int object 1 since True is 1. This will only be True if x = 1, if x is anything else this will Fail.
+
+Part 2: Ternary Expressions / Conditional Expressions
+Q5: Rewrite the following code using a ternary expression:
+if score >= 50:
+    result = "Pass"
+else:
+    result = "Fail"
+    
+Ans: result = 'Pass' if score >= 50 else 'Fail'
+
+
+Q6 (Trap): What will the following print and why?
+x = 0
+y = 10
+print("Yes" if x or y else "No")
+Ans: Python will check if x which is 0 -> flasy and go to next operand which is 10 -> truthy so will print 'Yes'.
+
+
+Q7 (Interleaving + Trap): Consider truthiness and short-circuiting:
+a = []
+b = [1]
+c = "Hello"
+print(a and b or c)
+What is printed? Explain step by step why.
+Ans: This is tricky without nested brackets. The layout is [] and [1] or 'Hello' -> False and True or True -> [] or 'Hello' -> False or True -> 'Hello'
+Final answer: 'Hello'. and operator returns first false or last true object, or operator returns first true or last false object
+
+Part 3: Match with Conditional Expressions
+Q8: Can Python match statements directly evaluate conditions like x > 5? If yes, show an example.
+
+Q9 (Trap/Recall): What is the difference between _ in match statements and a case True with a guard? Why might you still need a final _ case?
+Ans: A guard checks additonal conditional check other than the matching pattern or structure whereas _ is purely default or catch all case. 
+
+Q10 (Interleaving with Ternary): Convert the following match statement into an equivalent ternary (or nested ternary) expression:
+x = 7
+match x:
+    case _ if x < 5:
+        result = "small"
+    case _ if x < 10:
+        result = "medium"
+    case _:
+        result = "large"
+
+Ans: result = 'small' if x < 5 else 'medium' if x < 10 else 'large'
+
+Part 4: Traps & Edge Cases
+Q11 (Trap):
+x = None
+if x:
+    print("Has value")
+else:
+    print("Empty")
+
+What prints and why?
+Ans: prints Empty because None is a Falsy
+How would this differ if x = 0 or x = ""?
+Ans: It would be same for 0 and '' becasue 0 and empty string object are falsy too like None.
+
+Q12 (Trap with Multiple _):
+x = 7
+match x:
+    case _ if x < 5:
+        print("small")
+    case _ if x < 10:
+        print("medium")
+    case _ if x > 10:
+        print("large")
+
+Is the final _ if x > 10 necessary? Why or why not?
+Ans: the final if guard is not necessary because < 5 and < 10 have covered the specific condition check, for any other number it could have simply been default case _ alone, final if would have made sense if there were another check after that say for example extra large then case _ if x > 10: print('large') followed by case _ if x > 100: print('extra large')
+
+Part 5: Retrieval Challenge
+Q13: Write a one-liner using a ternary expression to choose the larger of a and b.
+x = a if a > b else b if b > a else a
+
+Q14 (Interleaving with short-circuiting): Using only or and and, write an expression that prints the first non-empty string among s1, s2, and s3.
+Ans: result = s1 or s2 or s3
